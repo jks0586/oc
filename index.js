@@ -7,6 +7,12 @@ var globals = require('./globals');
 //var admin = require('admin');
 //app.use(admin(app));
 
+
+var app = express();
+
+connection.init();
+routes.configure(app);
+
 app.listen(2525, function() {
   console.log('listening on 2525')
 })
